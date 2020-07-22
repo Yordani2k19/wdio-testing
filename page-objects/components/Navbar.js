@@ -21,6 +21,14 @@ class Navbar extends Base {
     return $('#help_link')
   }
 
+  get AccountActivityLink() {
+    return $('#account_activity_tab')
+  }
+
+  get payBillsLink() {
+    return $('#pay_bills_tab')
+  }
+
   clickSignIn() {
     this.signInButton.waitForExist()
     this.signInButton.click()
@@ -44,6 +52,16 @@ class Navbar extends Base {
     this.search.waitForExist()
     this.search.setValue(text)
     browser.keys('Enter')
+  }
+
+  accountActivityLinkClick() {
+    this.AccountActivityLink.waitForExist()
+    this.AccountActivityLink.click()
+  }
+
+  payBillsClick() {
+    this.payBillsLink.waitForExist()
+    this.payBillsLink.click()
   }
 }
 

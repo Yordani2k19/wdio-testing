@@ -36,16 +36,18 @@ class FeedbackPage extends Base {
 
   fillFeedbackForm(name, email, subject, questions) {
     this.feedbackForm.waitForExist()
+
     this.nameInput.waitForExist()
     this.nameInput.setValue(name)
+
     this.emailInput.waitForExist()
     this.emailInput.setValue(email)
+
     this.subjectInput.waitForExist()
     this.subjectInput.setValue(subject)
+
     this.questionsInput.waitForExist()
     this.questionsInput.setValue(questions)
-    // this.submitBtn.waitForExist()
-    // this.submitBtn.click()
   }
 
   submitFeedbackForm() {

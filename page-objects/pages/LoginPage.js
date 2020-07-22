@@ -44,10 +44,12 @@ class LoginPage extends Base {
 
   login(username, password) {
     this.loginForm.waitForExist()
+
     this.usernameInput.waitForExist()
     this.usernameInput.setValue(username)
     this.passwordInput.waitForExist()
     this.passwordInput.setValue(password)
+
     this.submitButton.waitForExist()
     this.submitButton.click()
   }

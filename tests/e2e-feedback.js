@@ -11,7 +11,7 @@ describe('E2E Feedback test', () => {
     FeedbackPage.fillFeedbackForm(
       'Pepe',
       'Pepe@email.com',
-      'Pepe subject',
+      'Pepe has a question',
       'I have a question for you..'
     )
 
