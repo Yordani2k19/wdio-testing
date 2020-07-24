@@ -17,8 +17,14 @@ class PaymentPage extends Base {
     return $('#sp_amount')
   }
 
-  get payDate() {
+  get openCalendar() {
     return $('#sp_date')
+  }
+
+  get selectedPayDate() {
+    return $(
+      '#ui-datepicker-div > table > tbody > tr:nth-child(3) > td:nth-child(4) > a'
+    )
   }
 
   get description() {
@@ -29,7 +35,7 @@ class PaymentPage extends Base {
     return $('#pay_saved_payees')
   }
 
-  fillPayForm(payee, account, amount, payDate, desc) {
+  fillPayForm(payee, account, amount, desc) {
     this.paymentForm.waitForExist()
 
     this.payee.waitForExist()
@@ -41,8 +47,10 @@ class PaymentPage extends Base {
     this.amount.waitForExist()
     this.amount.setValue(amount)
 
-    this.payDate.waitForExist()
-    this.payDate.setValue(payDate)
+    this.openCalendar.waitForExist()
+    this.openCalendar.click()
+    this.selectedPayDate.waitForExist()
+    this.selectedPayDate.click()
 
     this.description.waitForExist()
     this.description.setValue(desc)
