@@ -21,7 +21,7 @@ class PaymentPage extends Base {
     return $('#sp_date')
   }
 
-  get selectedPayDate() {
+  get selectedDate() {
     return $(
       '#ui-datepicker-div > table > tbody > tr:nth-child(3) > td:nth-child(4) > a'
     )
