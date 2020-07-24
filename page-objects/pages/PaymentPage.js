@@ -47,8 +47,8 @@ class PaymentPage extends Base {
     this.amount.waitForExist()
     this.amount.setValue(amount)
 
-    this.payDate.waitForExist()
-    this.payDate.click()
+    this.openCalendar.waitForExist()
+    this.openCalendar.click()
     this.selectedDate.waitForExist()
     this.selectedDate.click()
 

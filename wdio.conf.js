@@ -20,7 +20,7 @@ exports.config = {
   //
   // v runs only 1 test, don't use exclude, as sometimes there may be too many tests.
   // specs: ['./tests/**.js'],
-  specs: ['./tests/e2e-login.js' /* './tests/**.js' */],
+  specs: ['./tests/**.js' /* './tests/**.js' */],
   // Patterns to exclude.
   exclude: [
     // 'path/to/excluded/files'
