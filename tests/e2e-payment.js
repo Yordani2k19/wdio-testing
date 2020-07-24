@@ -15,7 +15,7 @@ describe('E2E Payment Test', () => {
   it('Perform Payment', () => {
     Navbar.payBillsClick()
 
-    PaymentPage.fillPayForm('Apple', 'Loan', '1200', '2020-07-08', 'Payment')
+    PaymentPage.fillPayForm('Apple', 'Loan', '1200', 'Payment')
     PaymentPage.payButtonClick()
 
     const alertMessage = $('#alert_content')
