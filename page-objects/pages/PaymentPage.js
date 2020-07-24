@@ -21,7 +21,7 @@ class PaymentPage extends Base {
     return $('#sp_date')
   }
 
-  get selectedPayDate() {
+  get selectedDate() {
     return $(
       '#ui-datepicker-div > table > tbody > tr:nth-child(3) > td:nth-child(4) > a'
     )
@@ -47,10 +47,10 @@ class PaymentPage extends Base {
     this.amount.waitForExist()
     this.amount.setValue(amount)
 
-    this.openCalendar.waitForExist()
-    this.openCalendar.click()
-    this.selectedPayDate.waitForExist()
-    this.selectedPayDate.click()
+    this.payDate.waitForExist()
+    this.payDate.click()
+    this.selectedDate.waitForExist()
+    this.selectedDate.click()
 
     this.description.waitForExist()
     this.description.setValue(desc)
